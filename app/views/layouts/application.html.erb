@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <h2>
+    <%= link_to 'Home', coupons_path %>
+    <%= link_to 'New Coupon', new_coupon_path %>
+  </h2>
 <%= yield %>
 
 </body>
