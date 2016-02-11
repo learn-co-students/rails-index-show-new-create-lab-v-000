@@ -1,0 +1,9 @@
+<h1>Coupon Form</h1>
+<%= form_tag('/coupons') do %>
+  <%= label_tag 'coupon_code' %>
+  <input id="coupon_code" name="coupon[coupon_code]">
+  <%= label_tag 'store' %>
+  <input id="store" name="coupon[store]">
+  <%= submit_tag 'Submit Coupon' %>
+<%end %>
+seems it is filling in the id of 'store' in one test but then inputing a hash of attributes in aother test.  
