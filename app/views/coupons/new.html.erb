@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h4>Coupon Form</h4>
+
+  <%= form_tag coupons_path do %>
+    <label>Code:</label>
+    <%= text_field_tag :coupon_code %> <br>
+
+    <label>Store:</label>
+    <%= text_field_tag :store %>
+
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+    <%= submit_tag "Submit Coupon" %>
+  <% end %>
+
+</body>
+</html>

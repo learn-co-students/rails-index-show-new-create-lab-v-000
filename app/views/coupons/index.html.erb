@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coupons</title>
+</head>
+<body>
+  <% @coupons.each do |coopin| %>
+    <p><%= link_to coopin.coupon_code, coupon_path(coopin) %> - <%= coopin.store %></p>
+  <% end %>
+</body>
+</html>
