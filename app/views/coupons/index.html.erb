@@ -1,0 +1,4 @@
+<h1>Index page!</h1>
+<%= div_for @coupons do |coupon| %>
+  <%= link_to "#{coupon.coupon_code} @ #{coupon.store}", coupon_path(coupon)%>
+<% end %>
