@@ -1,0 +1,6 @@
+<% @coupons.each do |c| %>
+  <%= link_to c.coupon_code, coupon_path(c) %>
+
+  <br>
+  <%= c.store.capitalize %>
+<% end %>
