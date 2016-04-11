@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails rails-index-show-new-create-lab-v-000: test" uuid="798a1e6b-d8ab-4ccb-9b51-2dc6ca4f0ddf">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="schema_migrations" schema="" catalog="" type="TABLE">
+      <column name="version" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12"/>
+      <index name="unique_schema_migrations" unique="true" columns="version"/>
+    </table>
+  </data-source>
+</component>
