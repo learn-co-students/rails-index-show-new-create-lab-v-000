@@ -1,0 +1,5 @@
+<h1>Coupons</h1>
+<%@coupons.each_with_index do |c,i|%>
+  <%="#{i+1}. "%> <b>Store</b>: <%=c.store%><br>
+  <b>Coupon code</b>: <%= link_to c.coupon_code, coupon_path(c) %><br></br>
+<%end%>
