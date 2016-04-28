@@ -1,6 +1,6 @@
 class CouponsController < ApplicationController
   def index
-    @students = Coupon.all
+    @coupons = Coupon.all
   end
 
   def show
