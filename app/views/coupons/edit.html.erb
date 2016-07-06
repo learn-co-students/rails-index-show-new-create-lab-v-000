@@ -1,0 +1,12 @@
+<h3>Edit Coupon</h3>
+<%= form_for @coupon, :url => { :action => "update" } do |c| %>
+  <label>Coupon Code:</label><br>
+  <%= c.text_field :coupon_code, :value => @coupon.coupon_code %><br>
+  <label>Store:</label><br>
+  <%= c.text_field :store, :value => @coupon.store %><br>
+  <%= c.submit "Edit Coupon" %>
+<% end %>
+
+<%= form_for @coupon, method: :delete do |d| %>
+  <%= d.submit "Delete" %>
+<% end %>
