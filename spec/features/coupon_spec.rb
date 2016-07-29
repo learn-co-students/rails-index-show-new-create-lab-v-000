@@ -22,7 +22,7 @@ describe 'form page' do
     expect(page).to have_content("Coupon Form")
   end
 
-  it 'new form submits content and renders form content' do
+  it 'new form submx content' do
     visit new_coupon_path
 
     fill_in 'coupon_code', with: "YAYFREE"
