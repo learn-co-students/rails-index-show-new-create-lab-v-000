@@ -1,4 +1,4 @@
-class CouponsController < ActiveRecord::Base
+class CouponsController < ApplicationController
   def index
   end
 
