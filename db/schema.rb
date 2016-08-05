@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804234816) do
+ActiveRecord::Schema.define(version: 20160805015646) do
 
   create_table "coupons", force: :cascade do |t|
     t.string   "coupon_code"
