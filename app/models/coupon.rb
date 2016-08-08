@@ -1,4 +1,4 @@
-class Coupon < ActiveRecord::based
+class Coupon < ActiveRecord::Base
   def to_s
     self.store + " " + self.coupon_code
   end
