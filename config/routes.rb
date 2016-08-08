@@ -54,5 +54,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  resources :coupons
+  resources :coupons, only: [:index, :new, :show, :create]
 end
