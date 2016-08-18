@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'CouponsController' do
+describe CouponsController do
 
   describe "POST create" do
     context "with valid attributes" do
