@@ -18,4 +18,4 @@ II.Stub Out MVC
      1)coupons_controller
        a) needs to redirect to helper method to redirect to show.
   III.Config
-    A.routes
+    A.routes -x
