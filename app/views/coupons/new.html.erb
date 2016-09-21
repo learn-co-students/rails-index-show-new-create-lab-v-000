@@ -2,10 +2,10 @@
  <!-- post below to '/coupons' but redirect in the controller to coupon/:id-->
  <%= form_tag coupons_path do %>
 
- <label>Code:</label><br>
+ <%= label_tag("Code:") %><br>
  <%= text_field_tag :coupon_code %><br>
 
- <label>Store:</label><br>
+ <%= label_tag("Store:") %><br>
  <%= text_field_tag :store %><br>
 
  <% hidden_field_tag :authenticity_token, form_authenticity_token %>
