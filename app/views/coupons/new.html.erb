@@ -1,4 +1,4 @@
-Coupons Form
+<h1>Coupon Form</h1>
  <!-- post below to '/coupons' but redirect in the controller to coupon/:id-->
  <%= form_tag coupons_path do %>
 
@@ -10,6 +10,5 @@ Coupons Form
 
  <% hidden_field_tag  :authenticity_token, form_authenticity_token %>
 
- <input type="submit" value="Submit Student">
-
-</form>
+ <input type="submit" value="Submit Coupon">
+<% end %>
