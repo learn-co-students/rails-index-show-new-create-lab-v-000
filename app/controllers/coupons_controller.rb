@@ -9,6 +9,7 @@ class CouponsController < ApplicationController
   end
 
   def show
+    @coupon = Coupon.find_by(id: params[:id])
   end
 
   def index
