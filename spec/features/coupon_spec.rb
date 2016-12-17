@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'pry'
+require 'pry-rails'
 
 describe 'Route to view' do
   it 'has an index page' do
@@ -18,6 +20,7 @@ end
 
 describe 'form page' do
   it 'form renders with the new action' do
+    #binding.pry
     visit new_coupon_path
     expect(page).to have_content("Coupon Form")
   end
