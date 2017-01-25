@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :coupons, only: [:index, :new, :show]
+  resources :coupons, only: [:create, :index, :new, :show]
 end
