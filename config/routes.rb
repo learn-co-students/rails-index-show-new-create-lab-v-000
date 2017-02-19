@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :coupons
+  resource :coupon
+
+  # get 'coupons/index'
+
+  # get 'coupons/new'
+
+  # get 'coupons/show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
