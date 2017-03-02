@@ -1,0 +1,11 @@
+<h1>Coupon Form</h1>
+
+<%= form_tag :coupons do %>
+<label>Coupon Code:</label><br>
+<%= text_field_tag :coupon_code %><br></br>
+
+<label>Coupon Store:</label><br>
+<%= text_field_tag :store %><br></br>
+
+<%= submit_tag "Submit Coupon" %><br>
+<%end%>
