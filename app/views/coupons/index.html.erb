@@ -1,0 +1,7 @@
+<% @coupons.each do |coupon| %>
+  <div><%= link_to coupon.coupon_code, coupon_path(coupon) %> | <%= coupon.store %></div>
+<% end %>
+
+<!-- Your index page should show all of the coupons in the database.
+The coupon codes on the index page should link to their corresponding coupon show page.
+You should use the link_to method and route helper methods. -->
