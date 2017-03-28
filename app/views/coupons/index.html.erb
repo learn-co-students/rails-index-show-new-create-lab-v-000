@@ -1,0 +1,6 @@
+<% coupon_store_array = [] %>
+<% @coupons.each do |coupon| %>
+  <% coupon_store_array << coupon.store %>
+<% end %>
+
+<h1><%= coupon_store_array.join("|") %></h1>
