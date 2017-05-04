@@ -1,0 +1,8 @@
+<h3>Coupon form</h3>
+Coupon Form
+<%= form_tag coupons_path do %>
+coupon code: <%= text_field_tag :coupon_code %><br>
+store: <%= text_field_tag :store %><br>
+
+<%= submit_tag "Submit Coupon" %>
+<% end %>
