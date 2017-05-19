@@ -1,0 +1,5 @@
+<%= content_tag :div, class: "coupons" do %>
+  <%= div_for(@coupons, class: "coupon") do |coupon| %>
+    <%= link_to coupon.coupon_code, coupon_path(coupon.id) %> | <%= coupon.store %>
+  <% end %>
+<% end %>
