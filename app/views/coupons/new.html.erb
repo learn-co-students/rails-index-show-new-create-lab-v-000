@@ -1,0 +1,6 @@
+<h1>Coupon Form</h1>
+<%= form_tag coupons_path do %>
+  <%= text_field_tag 'coupon_code', nil, placeholder: 'Enter your coupon code'%>
+  <%= text_field_tag 'store', nil, placeholder: 'Enter the Store'%>
+  <%= submit_tag "Submit Coupon" %>
+<% end  %>
