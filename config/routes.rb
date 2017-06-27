@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :coupons, only: [:index]
+  
+  # We do the following so that the show route is:
+  # /coupon/15
+  #   instead of:
+  # /coupon/show/15
+  get '/coupon/:id', to: 'coupons#show', as: 'coupon'
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
