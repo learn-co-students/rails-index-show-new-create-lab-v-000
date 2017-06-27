@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :coupons, only: [:index]
+  resources :coupons, only: [:index, :new, :create]
   
   # We do the following so that the show route is:
   # /coupon/15
