@@ -11,11 +11,8 @@ class CouponsController < ApplicationController
 		@coupon = Coupon.new
 	end
 		
-	
-
 	def create
 		@coupon = Coupon.create(coupon_params)
-		#I am so confused
 		redirect_to coupon_path(@coupon)
 	end
 
@@ -25,11 +22,7 @@ class CouponsController < ApplicationController
 
 	def coupon_params
 		{coupon_code: params[:coupon_code], store: params[:store]}
-		#params.require(:coupon).permit(:coupon_code, :store)
 	end
-
-
-
 
 
 end
