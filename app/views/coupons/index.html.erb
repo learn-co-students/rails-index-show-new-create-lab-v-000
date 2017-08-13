@@ -1,3 +1,13 @@
-<% @coupons.each do |coupon| %>
-  <div><%= link_to coupon.coupon_code.to_s, coupon_path(coupon) %>  <%= + " - " + coupon.store %></div>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Coupon List</title>
+  <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+  </head>
+  <body>
+    <% @coupons.each do |coupon| %>
+      <div><%= link_to coupon.coupon_code.to_s, coupon_path(coupon) %>  <%= + " - " + coupon.store %></div>
+    <% end %>
+  </body>
+</html>
