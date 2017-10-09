@@ -1,0 +1,13 @@
+<h2>Coupon Form</h2>
+<!-- form must have authenticity_token for fails to accept proper session (CSRF protection) -->
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+<%=form_tag coupons_path do%>
+  <label>Store:</label>
+  <%=text_field_tag :"store"%>
+
+  <label>Code:</label>
+  <%=text_field_tag :"coupon_code"%>
+
+  <%=submit_tag "Submit Coupon" %>
+<%end%>
