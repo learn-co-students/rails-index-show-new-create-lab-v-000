@@ -1,0 +1,7 @@
+<h1>Coupon Form</h1>
+<%= form_tag new_coupon_path  do%>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= text_area_tag :coupon_code %>
+    <%= text_area_tag :store %>
+    <%= submit_tag "Submit Coupon" %>
+<% end %>
