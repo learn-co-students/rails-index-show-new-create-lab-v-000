@@ -1,5 +1,3 @@
-# require 'pry'
-
 class CouponsController < ApplicationController
 
   def index
