@@ -10,6 +10,8 @@ require 'rails_helper'
 #     end
 #   end
 # end
+
+#Was told to comment this section out by NStephenson 8 MINUTES AGO Yeah, you can just remove that pending test
 #RSpec.describe CouponsHelper, :type => :helper do
   #pending "add some examples to (or delete) #{__FILE__}"
 #end
