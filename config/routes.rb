@@ -1,56 +1,33 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
-
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
-
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  resources :coupons, only: [:index, :new, :create]
+  get '/coupons/:id', to: 'coupons#show', as: 'coupon'
 end
+
+# line 2 is the refactored version of the following routes:
+
+# get '/coupons', to: 'coupons#index'
+# route is GET request to localhost:3000/coupons, the index page that displays all coupons
+# route is mapped to #index controller action (method) in the CouponsController class
+# the name of the route is coupons (path is default route name), so
+# the Rails route helper method #coupons_path returns "/coupons" (URL of link to index page)
+
+# get '/coupons/new', to: 'coupons#new'
+# route is GET request to localhost:3000/coupons/new, where form to create new coupon is presented
+# route is mapped to #new controller action (method) in the CouponsController class
+# following RESTful conventions, the name of the route is new_coupon, so
+# the Rails route helper method #new_coupon_path returns "/coupons/new"
+# which is the URL of link to webpage presenting the form to create a new coupon
+
+# post '/coupons', to: 'coupons#create'
+# route receives POST request sent by the form to create a new coupon upon its submission
+# route receives data submitted in the form to create a new coupon (this data ends up in params)
+# route is mapped to #create controller action (method) defined in CouponsController class
+
+# line 3 explanation (show action to display a single coupon):
+# route is GET request to localhost:3000/coupons/id attribute value of coupon instance to be shown
+# route maps to the #show controller action (method) defined in the CouponsController class
+# the name of the route is coupon
+# therefore, we can call the #coupon_path(coupon) route helper method
+# to return URL to page that shows a single coupon "/coupons/some id value here", ex: "/coupons/1"
+# Rails automatically uses the coupon instance passed in as the argument of #coupon_path(coupon)
+# to get the id attribute value of this coupon instance

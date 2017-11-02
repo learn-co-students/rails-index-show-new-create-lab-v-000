@@ -1,0 +1,23 @@
+<h1>All Coupons</h1>
+
+<% @coupons.each do |coupon| %>
+  <div><%= link_to coupon.coupon_code, coupon_path(coupon) %> | <%= coupon.store %></div>
+<% end %>
+
+<!-- Explanation:
+Iterate over the @coupons array of all coupon instances.
+For each coupon instance, generate a <div> that contains the link to that coupon's show page,
+where the clickable text of each link is the coupon instance's coupon_code attribute value,
+(which is retrieved by calling #coupon_code reader on the coupon instance).
+Within each <div>, beside the show page link (and after a pipe character flanked by spaces),
+inject the store attribute value of the coupon instance by calling #store getter on instance.
+The #link_to method accepts 2 string arguments:
+The first string argument is the clickable text of the show page link being generated,
+which is the coupon_code attribute value of the coupon instance, retrieved by calling #coupon_code getter on instance
+The second argument is the string URL (href attribute value of <a> tag).
+coupon is the name of the route that leads to the show page of a single coupon
+Therefore, route helper #coupon_path(coupon) returns "/coupons/id attribute value of coupon being shown"
+The argument passed to #coupon_path(coupon) is the coupon instance itself, and Rails is smart enough
+to get the id attribute value of this coupon instance
+An example of an HTML <a> element created by calling #link_to method is:
+<a href="/coupons/1">SHALOM</a> (if a coupon instance with attributes id=1 and coupon_code="SHALOM" existed)
