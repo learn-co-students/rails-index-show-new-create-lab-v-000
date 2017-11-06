@@ -24,7 +24,7 @@ describe 'form page' do
 
   it 'new form submits content and renders form content' do
     visit new_coupon_path
-
+# binding.pry
     fill_in 'coupon_code', with: "YAYFREE"
     fill_in 'store', with: "Hobby Lobby"
 
