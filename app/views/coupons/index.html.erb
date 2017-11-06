@@ -3,5 +3,5 @@
 	<%= coupon.store %>
 
 	<strong>Coupon Code</strong>
-	<%= coupon.coupon_code %><br>
+	<%= link_to coupon.coupon_code, coupon_path(coupon) %><br>
 <% end %>
