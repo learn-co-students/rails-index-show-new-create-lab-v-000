@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe 'Route to view' do
   it 'has an index page' do
@@ -12,6 +13,7 @@ describe 'Multiple coupons are shown' do
     Coupon.create(coupon_code: "ASD123", store: "Chipotle")
     Coupon.create(coupon_code: "XYZ098", store: "Jamba")
     visit coupons_path
+    #binding.pry
     expect(page).to have_content(/Chipotle|Jamba/)
   end
 end
@@ -62,6 +64,7 @@ describe 'Show page' do
 
   it 'renders the store name in a h1 tag' do
     visit coupon_path(@coupon)
+    #binding.pry
     expect(page).to have_css("h1", text: "Chipotle")
   end
 end
