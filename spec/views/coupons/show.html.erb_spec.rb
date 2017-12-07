@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe Coupon, type: :model do
+RSpec.describe "coupons/show.html.erb", type: :view do
   pending "add some examples to (or delete) #{__FILE__}"
 end
