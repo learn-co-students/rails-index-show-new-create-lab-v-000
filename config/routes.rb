@@ -55,5 +55,5 @@ Rails.application.routes.draw do
   #   end
 
   resources :coupons, only: [:index, :new, :show, :create]
-  
+
 end
