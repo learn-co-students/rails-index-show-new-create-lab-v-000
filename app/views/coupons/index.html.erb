@@ -1,0 +1,5 @@
+<% Coupon.all.each do |coupon| %>
+<ul>
+  <li><%= coupon.coupon_code %> - <%= coupon.store %></li>
+</ul>
+<% end %>
