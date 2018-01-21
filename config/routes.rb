@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get  '/coupons', to: 'coupons#index', as:  'coupons'
+  post '/student/new', to:'coupons#create',   as: 'create_coupon'
+  get  '/student/new', to:'coupons#new',   as: 'new_coupon'
+  get  '/coupon/:id',  to:'coupons#show',  as:  'coupon'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
