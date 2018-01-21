@@ -1,0 +1,4 @@
+<% coupon_store_array = [] %>
+<% @coupons.each do |coupon| %>
+  <h2> <%= coupon.store + " " %><%=link_to coupon.coupon_code, coupon_path(coupon) %> </h2>
+<% end %>
