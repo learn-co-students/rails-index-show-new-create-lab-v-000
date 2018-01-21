@@ -72,4 +72,6 @@ describe 'linking from the index page to the show page' do
     visit coupons_path
     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
   end
+
+  
 end
