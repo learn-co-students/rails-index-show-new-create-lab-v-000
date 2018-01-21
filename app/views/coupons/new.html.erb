@@ -1,0 +1,30 @@
+<h1>Coupon Form</h1>
+
+<%= form_tag coupons_path do %>
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :coupon_code %><br>
+  <label>Store:</label><br>
+  <%= text_field_tag :store %><br>
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
+
+<!-- The form_tag Rails form helper method creates opening and closing <form></form> tags.
+It knows that the method property of <form> equals "POST" since the form is being submitted via a POST request
+form_tag method is passed the argument of the #coupons_path route helper method, which returns "/coupons" (index page URL)
+because the POST request sent by the form to create a new coupon is received by post "/coupons" route
+form_tag also automatically creates authenticity token
+Rails form helper method text_field_tag is called with argument :coupon_code to generate
+<input type="text" id="coupon_code" name="coupon_code"> form field where the coupon's code is entered in form
+The :coupon_code argument is the name property value of this <input> form field, as a symbol.
+The name property value of <input> is key in params hash
+Rails form helper method text_field_tag is called with argument :store to generate
+<input type="text" id="store" name="store"> form field where the store where the coupon is used is submitted
+The :store argument is the name property value of this <input> form field, as a symbol
+The name property value of <input> is key in params hash
+Therefore, when the form to create a new coupon is submitted, the params hash has top-level keys of "coupon_code" and "store",
+pointing to the values that the user entered into the "Coupon Code:" and "Store:" form fields, respectively.
+These values submitted in the form will become the coupon_code and store attribute values
+of the coupon instance created in #create action (method) defined in CouponsController class
+The submit_tag Rails form helper method is passed the "Submit Coupon" string argument
+to create a submit button with the text "Submit Coupon", i.e.,
+<input type="submit" value="Submit Coupon">
