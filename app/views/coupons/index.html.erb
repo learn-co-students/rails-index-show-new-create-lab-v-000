@@ -1,0 +1,5 @@
+<ol>
+  <% @coupons.each do |coupon| %>
+    <td><%= link_to(coupon.coupon_code, coupon_path(coupon)) %></td>, available at <%= coupon.store %><br>
+  <% end %>
+</ol>
