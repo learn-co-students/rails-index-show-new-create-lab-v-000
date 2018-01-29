@@ -1,0 +1,50 @@
+
+CouponsController
+  POST create
+    with valid attributes
+[32m      creates a new coupon[0m
+[32m      redirects to the new coupon[0m
+
+Route to view
+[32m  has an index page[0m
+
+Multiple coupons are shown
+[32m  on the index page[0m
+
+form page
+[32m  form renders with the new action[0m
+[32m  new form submits content and renders form content[0m
+[32m  creates a record in the database[0m
+
+Show page
+[32m  renders properly[0m
+[32m  renders the coupon code in a h1 tag[0m
+[32m  renders the store name in a h1 tag[0m
+
+linking from the index page to the show page
+[31m  index page links to coupon page (FAILED - 1)[0m
+
+CouponsHelper
+[33m  add some examples to (or delete) /Users/BradSmith/Development/code/rails-index-show-new-create-lab-v-000/spec/helpers/coupons_helper_spec.rb (PENDING: Not yet implemented)[0m
+
+Coupon
+[32m  can be created[0m
+
+Pending:
+  [33mCouponsHelper add some examples to (or delete) /Users/BradSmith/Development/code/rails-index-show-new-create-lab-v-000/spec/helpers/coupons_helper_spec.rb[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/helpers/coupons_helper_spec.rb:14[0m
+
+Failures:
+
+  1) linking from the index page to the show page index page links to coupon page
+     [31mFailure/Error: expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))[0m
+     [31m  expected to find link "FREESTUFF" with href "/coupons/1" but there were no matches[0m
+     [36m# ./spec/features/coupon_spec.rb:73:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.31341 seconds (files took 1.44 seconds to load)
+[31m13 examples, 1 failure, 1 pending[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/coupon_spec.rb:70[0m [36m# linking from the index page to the show page index page links to coupon page[0m
