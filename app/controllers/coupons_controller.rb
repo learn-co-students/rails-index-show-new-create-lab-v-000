@@ -15,4 +15,16 @@ class CouponsController < ApplicationController
     @coupon = Coupon.create(coupon_code: params[:coupon_code], store: params[:store])
     redirect_to coupon_path(@coupon)
   end
+
+  def edit
+    #we want to display existing info in edit form
+    @coupon = Coupon.find(params[:id])
+  end
+
+  def update
+    @coupon = Coupon.find(params[:id])
+    @coupon.update(coupon_code: params[:coupon_code], store: params[:store])
+    redirect_to coupon_path(@coupon)
+  end
+  
 end
