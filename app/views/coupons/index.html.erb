@@ -1,0 +1,12 @@
+<h1>This is all of the Coupons</h1>
+<ol>
+<% @coupons.each do |clip| %>
+  <h2>
+    <li>
+      <%= link_to(clip.coupon_code, coupon_path(clip)) %>
+      <%= clip.store %>
+    </li>
+  </h2>
+
+<% end %>
+</ol>
