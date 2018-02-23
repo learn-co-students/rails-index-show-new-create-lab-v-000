@@ -14,6 +14,8 @@
 ActiveRecord::Schema.define(version: 20180222223306) do
 
   create_table "coupons", force: :cascade do |t|
+    t.string "coupon_code"
+    t.string "store"
   end
 
 end
