@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :coupons, only: [:index, :new, :create]
-  get '/coupons/:id', to: 'coupons#show', as: 'coupon'
+  get '/coupon/:id', to: 'coupons#show', as: 'coupon'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -57,4 +57,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
