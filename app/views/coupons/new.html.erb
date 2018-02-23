@@ -1,0 +1,15 @@
+<h3>Coupon Form</h3>
+
+<form>
+  <form action="<%= coupons_path %>" method="POST">
+  <label>Coupon Code: </label><br>
+  <input type="text" id="[coupon]coupon_code" name="coupon_code"><br>
+
+  <label>Coupon Store:</label><br>
+  <textarea id="[coupon]store" name="store"></textarea><br>
+
+   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit Coupon">
+</form>
+
+<%= params.inspect %>
