@@ -1,0 +1,3 @@
+<%= div_for(@coupons, class: "coupon-index-page") do |coupon| %>
+  <a href='<%= coupon_path(coupon) %>'><%= coupon.coupon_code %> for <%= coupon.store %></a><br>
+<% end %>
