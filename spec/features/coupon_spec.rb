@@ -18,6 +18,7 @@ end
 
 describe 'form page' do
   it 'form renders with the new action' do
+    
     visit new_coupon_path
     expect(page).to have_content("Coupon Form")
   end
