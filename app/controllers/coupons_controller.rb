@@ -8,8 +8,6 @@ class CouponsController < ApplicationController
   end
 
   def create
-    #@coupon = Coupon.create!{:coupon => { :coupon_code => "ASD123", :store => "Dean and Deluca"}
-    #@coupon = Coupon.create!(:coupon_code => params[:coupon_code], :store => params[:store])
     @coupon = Coupon.new
     @coupon.coupon_code = params[:coupon_code]
     @coupon.store = params[:store]
