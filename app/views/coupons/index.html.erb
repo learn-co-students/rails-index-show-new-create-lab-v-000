@@ -1,5 +1,5 @@
 <h3>All Coupons</h3>
 
 <% @coupons.sort_by{|c| c.store}.each do |coupon| %>
-  <strong><%= coupon.store %></strong> - <%= link_to coupon.coupon_code, coupon_path(coupon.id) %>
+  <strong><%= coupon.store %></strong> - <%= link_to coupon.coupon_code, coupon_path(coupon) %>
 <% end %>
