@@ -1,0 +1,7 @@
+<%= form_tag coupons_path do %>
+  <label for="">Coupon Form</label>
+  <%= text_field_tag :coupon_code %>
+  <%= text_field_tag :store %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
