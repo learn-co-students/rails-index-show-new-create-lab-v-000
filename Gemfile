@@ -32,6 +32,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'pry'
+
+gem 'shotgun'
+
 group :development, :test do
   gem 'byebug'
   gem 'spring'
