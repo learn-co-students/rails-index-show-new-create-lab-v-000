@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class CouponsController < ApplicationController
 
   def index
 
@@ -12,6 +12,6 @@ class StudentsController < ApplicationController
   end
 
   def create
-    
+
   end
 end
