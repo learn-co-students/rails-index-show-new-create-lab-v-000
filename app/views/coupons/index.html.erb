@@ -1,0 +1,8 @@
+<h1>Here are all of the coupons</h1>
+
+<ul>
+  <%@coupons.each do |coupon|%>
+    <li> <%= coupon.coupon_code %> </li>
+    <li> <%= coupon.store %> </li>
+  <%end%>
+</ul>
