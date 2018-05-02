@@ -1,0 +1,8 @@
+<form class="" action="<%=coupon_path%>" method="post">
+  <label for="">Coupon Code:</label>
+  <input type="text" name="coupon[coupon_code]" value="">
+  <label for="">Store:</label>
+  <input type="text" name="coupon[store]" value="">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="submit" name="" value="Submit">
+</form>

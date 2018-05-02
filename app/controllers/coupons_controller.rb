@@ -1,5 +1,6 @@
 class CouponsController < ApplicationController
   def index
+    binding.pry
     @coupons = Coupon.all
   end
 
