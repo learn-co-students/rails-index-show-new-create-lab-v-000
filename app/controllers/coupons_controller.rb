@@ -13,3 +13,5 @@ class CouponsController < ApplicationController
     redirect_to coupon_path(@coupon)
   end
 end
+
+#rspec ./spec/controllers/coupons_controller_spec.rb --fail-fast
