@@ -1,0 +1,8 @@
+<h1>Coupon Form</h1>
+<form class="" action="<%=coupons_path%>" method="post">
+  <label for=""></label>
+  <%@coupons.each do |coupon| %>
+  <%= link_to coupon.to_s, coupons_path(@coupons) %>
+  <%= coupon.store + " " + coupon.coupon_code %>
+  <% end %>
+</form>
