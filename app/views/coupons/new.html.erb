@@ -1,0 +1,9 @@
+<h1>Coupon Form</h1>
+
+<%=form_for @coupon, url: {action: "create"} do |f| %>
+	<label>Coupon code:</label>
+	<%=f.text_field :coupon_code %>
+	<label>Store:</label>
+	<%=f.text_field :store%>
+	<%=submit_tag "Submit Coupon" %>
+<%end%>
