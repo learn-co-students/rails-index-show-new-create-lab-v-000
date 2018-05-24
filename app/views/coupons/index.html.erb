@@ -2,10 +2,8 @@
 
 <% @coupons.each do |coupon| %>
   <%= link_to coupon_path(coupon) do  %>
-  <%=coupon.coupon_code%>|
+  <%=coupon.coupon_code%> |
   <%=coupon.store%>
   <%end%>
-  <!-- link_to(name = nil, options = nil, html_options = nil, &block)  -->
-  <!-- should show each coupon and link to it's show page -->
-  <!-- link_to_unless(condition, name, options = {}, html_options = {}, &block)  -->
+  
  <% end %>
