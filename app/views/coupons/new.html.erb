@@ -4,13 +4,13 @@
 <%= form_tag coupons_path do %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 
-<li> <%= label_tag 'store', "Store Name:" %> </li>
-<li> <%= text_field_tag 'store', nil, placeholder: 'enter the store name' %> </li>
+<li> <%= label_tag 'coupon[store]', "Store Name:" %> </li>
+<li> <%= text_field_tag 'coupon[store]', nil, placeholder: 'enter the store name' %> </li>
 
-<li> <%= label_tag 'coupon_code', "Coupon Code:" %> </li>
-<li> <%= text_area_tag 'coupon_code', nil, placeholder: "enter the store's coupon ode" %> </li>
+<li> <%= label_tag  'coupon[coupon_code]', "Coupon Code:" %> </li>
+<li> <%= text_area_tag  'coupon[coupon_code]', nil, placeholder: "enter the store's coupon ode" %> </li>
 
-<li> <%= submit_tag "create"  %> </li>
+<li> <%= submit_tag "Submit Coupon"  %> </li>
 
 <%end%>
 
