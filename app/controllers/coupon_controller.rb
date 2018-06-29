@@ -1,4 +1,4 @@
-class CuponsController < ApplicationController
+class CouponsController < ApplicationController
 
 
-end 
+end s
