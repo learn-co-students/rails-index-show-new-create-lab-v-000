@@ -1,3 +1,4 @@
+require "pry"
 class CouponController < ApplicationController
     def index
 
@@ -7,7 +8,7 @@ class CouponController < ApplicationController
     end
 
     def create
-
+        binding.pry
     end
 
     def show
