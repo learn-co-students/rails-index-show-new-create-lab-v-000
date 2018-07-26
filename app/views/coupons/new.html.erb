@@ -5,7 +5,9 @@
 <%= form_tag coupons_path do %>
   <label>Coupon:</label> <br>
 
-  <h2> coupon_code <%= text_area_tag :'coupon_code' %>  <br>   store <%= text_area_tag :'store' %> </h2>
+  <h2> coupon_code <%= text_area_tag :"coupon[coupon_code]" %> 
+   <br>   
+  store <%= text_area_tag :"coupon[store]" %> </h1>
 
   <%= submit_tag "Submit Coupon" %>
 
