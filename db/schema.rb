@@ -14,10 +14,8 @@
 ActiveRecord::Schema.define(version: 1) do
 
   create_table "coupons", force: :cascade do |t|
-    t.string   "coupon_code"
-    t.string   "store"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string "coupon_code"
+    t.string "store"
   end
 
 end
