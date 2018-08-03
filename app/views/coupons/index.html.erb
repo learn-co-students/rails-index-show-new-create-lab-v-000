@@ -1,0 +1,8 @@
+<ol>
+  <% @coupons.each do |coupon| %>
+  
+    <li><%= link_to coupon.list_coupon, coupon_path(coupon) %></li>
+    
+  <% end %>
+</ol>
+  
