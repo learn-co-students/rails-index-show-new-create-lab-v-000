@@ -1,2 +1,2 @@
-module CouponControllerHelper
+module CouponHelper
 end
