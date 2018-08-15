@@ -6,7 +6,7 @@ class CreateCouponsTable < ActiveRecord::Migration
       column.string :coupon_code 
       column.string :store
       
-      t.timestamps null: false
+      column.timestamps null: false
     end
   end
   
