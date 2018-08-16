@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Coupons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coupon code</th>
+      <th>Store</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coupons.each do |coupon| %>
+      <tr>
+        <td><%= link_to coupon.coupon_code, coupon_path(coupon) %></td>
+        <td><%= coupon.store %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
