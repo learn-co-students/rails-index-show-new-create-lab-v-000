@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   get '/coupons' => 'coupons#index' #=> 'coupons'
-  get '/coupons/new' => 'coupons#new' #=> 'coupons_new'
-  get '/coupons/:id' => 'coupons#show', as: 'show_coupon'
+  get '/coupons/new' => 'coupons#new', as: 'new_coupon'
+  get '/coupons/:id' => 'coupons#show', as: 'coupon'
   post '/coupon' => 'coupons#create', as: 'create_coupon'
 
 
