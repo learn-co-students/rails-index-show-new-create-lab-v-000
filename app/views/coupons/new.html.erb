@@ -1,13 +1,12 @@
-views/coupons/new
-
-<h3>Coupon Form</h3>
+<h2>Coupon Form</h2>
 
 <%= form_tag coupons_path do %>
-  <label>Coupon Code:</label><br>
-  <%= text_field_tag :'coupon[coupon_code]' %><br>
- 
-  <label>Store:</label><br>
-  <%= text_field_tag :'coupon[store]' %><br>
- 
+  <label for="">Coupon Code: </label>
+  <%= text_field_tag :coupon_code %>
+
+  <label for="">Store: </label>
+  <%= text_field_tag :store %>
+
   <%= submit_tag "Submit Coupon" %>
+
 <% end %>
