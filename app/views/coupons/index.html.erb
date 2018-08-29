@@ -1,2 +1,7 @@
-<h1>Coupons#index</h1>
-<p>Find me in app/views/coupons/index.html.erb</p>
+
+<% Coupon.all.each do |coupon| %>
+
+    <%= link_to "#{coupon.coupon_code} - #{coupon.store}", coupon_path %>
+    <br>
+
+<% end %>
