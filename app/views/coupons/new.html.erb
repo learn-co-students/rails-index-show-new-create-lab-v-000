@@ -1,0 +1,12 @@
+<h1>Coupon Form</h1>
+
+<%= form_for @coupon do %>
+
+  <label>Coupon coupon_code:</label><br>
+  <%= text_field_tag :'coupon[coupon_code]' %><br>
+
+  <label>Coupon Store</label><br>
+  <%= text_area_tag :'coupon[store]' %><br>
+
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
