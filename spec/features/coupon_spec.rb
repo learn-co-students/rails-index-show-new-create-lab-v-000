@@ -13,7 +13,7 @@ describe 'Multiple coupons are shown' do
     Coupon.create(coupon_code: "XYZ098", store: "Jamba")
     visit coupons_path
     #binding.pry
-    expect(page).to have_content(/Chipotle|Jamba/)
+    expect(page).to have_content(/Chipotle||Jamba/)
   end
 end
 
