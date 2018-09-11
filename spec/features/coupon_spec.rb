@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require 'pry'
 describe 'Route to view' do
   it 'has an index page' do
     visit coupons_path
@@ -12,6 +12,7 @@ describe 'Multiple coupons are shown' do
     Coupon.create(coupon_code: "ASD123", store: "Chipotle")
     Coupon.create(coupon_code: "XYZ098", store: "Jamba")
     visit coupons_path
+    #binding.pry
     expect(page).to have_content(/Chipotle|Jamba/)
   end
 end
