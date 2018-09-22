@@ -1,6 +1,7 @@
 class CouponsController < ApplicationController
   def index
     @coupons = Coupon.all
+    redirect_to coupons_path
   end
 
   def show
