@@ -1,0 +1,4 @@
+<h1>Coupon Code Super Market</h1>
+<% @coupons.each do |c| %>
+  <h3>Code: <%= c.coupon_code %> - <strong><%= c.store %></strong></h3>
+<% end %>
