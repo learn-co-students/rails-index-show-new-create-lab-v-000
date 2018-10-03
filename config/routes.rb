@@ -32,6 +32,8 @@ Rails.application.routes.draw do
   #     resource :seller
   #   end
 
+  resources :coupons, only: [:index, :show, :new, :create] 
+
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
