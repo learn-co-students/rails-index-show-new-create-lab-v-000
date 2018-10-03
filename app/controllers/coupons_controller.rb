@@ -20,3 +20,6 @@ class CouponsController < ApplicationController
   end
 
 end
+
+
+# test hello
