@@ -1,10 +1,9 @@
-class CouponsController < ApplicationController
+class CouponsController < ApplicationController #full set of crud controllers
   def index
     @coupons = Coupon.all
-    redirect_to coupons_path
   end
 
-  def show
+  def show #dynamic route
     @coupon = Coupon.find(params[:id])
   end
 
@@ -17,7 +16,7 @@ class CouponsController < ApplicationController
     @coupon[:coupon_code] = params[:coupon][:coupon_code]
     @coupon[:store] = params[:coupon][:store]
     @coupon.save
-    redirect_to coupons_path(@coupon)
+    redirect_to coupon_path(@coupon)
   end
 
   # add create method here

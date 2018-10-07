@@ -1,3 +1,7 @@
 <% @coupons.each do |coupon| %>
   <div><%= coupon.coupon_code %></div>
+  <div><%= coupon.store %></div>
+  <div><%= link_to coupon.coupon_code, coupon_path(coupon) %></div>
 <% end %>
+
+<% #needs to show a link to each coupon show page using link_to method and route helper methods %>
