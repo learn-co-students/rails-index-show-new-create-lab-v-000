@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
+   resources :coupons, only: [:index, :new, :create, :show]
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
