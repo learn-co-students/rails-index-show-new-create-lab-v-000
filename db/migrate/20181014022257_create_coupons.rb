@@ -1,7 +1,7 @@
-class CreateCoupons < ActiveRecord::Migration
+class CreateCoupons < ActiveRecord::Migration[5.1]
   def change
     create_table :coupons do |t|
-      t.string :coupon
+      t.string :coupon_code
       t.string :store
 
       t.timestamps null: false
