@@ -1,0 +1,14 @@
+<h1>TCoupon Form</h1>
+
+<%= form_tag coupons_path do %>
+    <label>Fill in coupon code</label><br>
+    <%= text_field_tag :'coupon[coupon_code]'%><br>
+    <%= text_field_tag :'coupon[store]'%><br>
+
+    
+    
+    <%= submit_tag "Submit Coupon" %>
+<% end %>
+
+
+
