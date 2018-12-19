@@ -20,8 +20,6 @@ class CouponsController < ApplicationController
         store: params[:store]
       }
     )
-    # byebug # []
-
     redirect_to coupon_path(@coupon)
   end
 end
