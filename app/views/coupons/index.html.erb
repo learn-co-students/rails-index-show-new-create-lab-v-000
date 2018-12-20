@@ -8,11 +8,12 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-<%# <% byebug %> %>
+<%# <% byebug %>
 <%# [] %>
   <tbody>
     <% @coupons.each do |coupon| %>
       <tr>
+        <td><%= coupon.store %></td>
         <td><%= link_to 'Show', coupon %></td>
         <td><%= link_to 'Edit', edit_coupon_path(coupon) %></td>
         <td><%= link_to 'Destroy', coupon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
