@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Coupons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<%# <% byebug %>
+<%# [] %>
+  <tbody>
+  <%# byebug %>
+    <% @coupons.each do |linked_coupon| %>
+      <tr>
+        <td><%= linked_coupon.store %></td>
+        <td><%= link_to linked_coupon.coupon_code, coupon_path(linked_coupon) %></td>
+        <td><%= link_to 'Edit', edit_coupon_path(linked_coupon) %></td>
+        <%# <td><%= link_to 'Destroy', destroy_coupon_path(linked_coupon), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coupon', new_coupon_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@coupon) do |f| %>
+  <% if @coupon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coupon.errors.count, "error") %> prohibited this coupon from being saved:</h2>
+
+      <ul>
+      <% @coupon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <label>Coupon code:</label><br>
+  <%= text_field_tag :'coupon[coupon_code]' %><br>
+ 
+  <label>Store:</label><br>
+  <%= text_field_tag :'coupon[store]' %><br>
+ 
+  <%= submit_tag "Submit Coupon" %>
+
+<% end %>
