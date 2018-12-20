@@ -11,12 +11,13 @@
 <%# <% byebug %>
 <%# [] %>
   <tbody>
-    <% @coupons.each do |coupon| %>
+  <%# byebug %>
+    <% @coupons.each do |linked_coupon| %>
       <tr>
-        <td><%= coupon.store %></td>
-        <td><%= link_to 'Show', coupon %></td>
-        <td><%= link_to 'Edit', edit_coupon_path(coupon) %></td>
-        <td><%= link_to 'Destroy', coupon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= linked_coupon.store %></td>
+        <td><%= link_to linked_coupon.coupon_code, coupon_path(linked_coupon) %></td>
+        <td><%= link_to 'Edit', edit_coupon_path(linked_coupon) %></td>
+        <%# <td><%= link_to 'Destroy', destroy_coupon_path(linked_coupon), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
