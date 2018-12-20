@@ -2,7 +2,6 @@ class CouponsController < ApplicationController
 
   def index
     @coupons = Coupon.all
-    # byebug # []
   end
 
   def show
@@ -14,7 +13,6 @@ class CouponsController < ApplicationController
   end
 
   def create
-    # byebug
     @coupon = Coupon.create(
       {
         coupon_code: params[:coupon][:coupon_code],
