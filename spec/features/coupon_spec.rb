@@ -24,7 +24,6 @@ describe 'form page' do
 
   it 'new form submits content and renders form content' do
     visit new_coupon_path
-
     fill_in 'coupon[coupon_code]', with: "YAYFREE"
     fill_in 'coupon[store]', with: "Hobby Lobby"
 
