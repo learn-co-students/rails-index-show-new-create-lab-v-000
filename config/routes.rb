@@ -53,4 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :coupons, ony: [:index, :show]
+  post 'coupons/new', to: 'coupons#create'
 end
