@@ -13,8 +13,9 @@ class CouponsController < ApplicationController
 
     def create
         @coupon = Coupon.new
-        @coupon.coupon_code = params[:coupon_code]
-        @coupon.store = params[:store]
+        @coupon.coupon_code = params[:coupon][:coupon_code]
+        #you need a nested hash if the form tags aren't using symbols but hashes.
+        @coupon.store = params[:coupon][:store]
         @coupon.save
         redirect_to coupon_path(@coupon)
     end
