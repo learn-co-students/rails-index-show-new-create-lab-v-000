@@ -1,3 +1,4 @@
+require 'pry'
 class CouponsController < ApplicationController
     def index 
         @coupons = Coupon.all
@@ -11,7 +12,7 @@ class CouponsController < ApplicationController
     end
 
     def create
-        @coupon = Student.new
+        @coupon = Coupon.new
         @coupon.coupon_code = params[:coupon_code]
         @coupon.store = params[:store]
         @coupon.save
