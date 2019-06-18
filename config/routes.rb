@@ -56,4 +56,5 @@ Rails.application.routes.draw do
 
   #resources :folder_name, only [:method] 
   resources :coupons, only: [:index, :new, :create, :show]
+  
 end

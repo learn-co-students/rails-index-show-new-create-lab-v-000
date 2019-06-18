@@ -1,5 +1,9 @@
 <div>
   <% @coupons.each do |coupon| %>
-    <div><%= link_to coupon.store, "coupon/<%=coupon.id%>" %></div>
+    <div><%=coupon.store%>
+    <%= link_to coupon.coupon_code, coupon_path(coupon) %></div>
   <% end %>
 </div>
+
+<!-- The first argument to link_to is what the link will display, the second argument is the href attribute -->
+<!-- coupon code is the name of the coupon-->
