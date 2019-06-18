@@ -29,7 +29,6 @@ describe 'form page' do
     fill_in 'coupon[store]', with: "Hobby Lobby"
 
     click_on "Submit Coupon"
-
     expect(page).to have_content("YAYFREE")
   end
 
