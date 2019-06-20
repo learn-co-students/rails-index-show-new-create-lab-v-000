@@ -14,7 +14,6 @@ class CouponsController < ApplicationController
 
   def create
     @coupon = Coupon.new
-    binding.pry
     @coupon.coupon_code = params[:coupon][:coupon_code]
     @coupon.store = params[:coupon][:store]
     @coupon.save
