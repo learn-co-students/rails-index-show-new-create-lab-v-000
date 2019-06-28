@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #resources :folder_name, only [:method] 
+  resources :coupons, only: [:index, :new, :create, :show]
+  #no dynamic route needed.
 end
