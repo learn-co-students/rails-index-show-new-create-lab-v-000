@@ -1,0 +1,5 @@
+<div>
+  <% @coupons.each do |coupon| %>
+    <%= link_to coupon.combine_attributes, coupon_path(coupon) %>
+  <% end %>
+</div>
