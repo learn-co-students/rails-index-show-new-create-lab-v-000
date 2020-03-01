@@ -1,0 +1,10 @@
+<h1>Coupon Extravaganza!</h1>
+
+<table>
+  <%= @coupons.each do |coupon| %>
+    <tr>
+      <td><%= link_to coupon.store, coupon_path(coupon) %></td>
+      <td><%= link_to coupon.coupon_code, coupon_path(coupon)  %></td>
+    </tr>
+  <% end %>
+</table>
