@@ -1,0 +1,13 @@
+<h1>Coupon Form</h1>
+
+<%= form_tag coupons_path do %>
+  <p>
+    <%= label_tag "coupon[store]", "Coupon Store:" %>
+    <%= text_field_tag "coupon[store]" %>
+  </p>
+  <p>
+    <%= label_tag "coupon[coupon_code]", "Coupon Code:" %>
+    <%= text_field_tag "coupon[coupon_code]" %>
+  </p>
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
