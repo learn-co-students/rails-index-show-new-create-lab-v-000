@@ -16,7 +16,7 @@ class CouponsController < ApplicationController
         @coupon.coupon_code = params[:coupon_code]
         @coupon.store = params[:store]
         @coupon.save
-        redirect_to coupons_path(@coupon)
+        redirect_to new_coupon_path(@coupons)
 
     end
 
