@@ -1,5 +1,5 @@
-<h2> Form</h2>
-<%= form_tag students_path do %>
+<h2>Coupon Form</h2>
+<%= form_tag coupons_path do %>
   <label>Coupon:</label><br>
   <%= text_field_tag :coupon_code %><br>
 
@@ -7,4 +7,4 @@
   <%= text_area_tag :store %><br>
 
   <%= submit_tag "Submit Coupon" %>
-<h1><% end %></h1>
+  <% end %>
